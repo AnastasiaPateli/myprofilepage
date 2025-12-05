@@ -83,22 +83,24 @@
             opacity: 1;
         }
         
-        /* --- 3. CSS for Home Summary Section --- */
+        /* --- 3. CSS for Home Summary Section (UPDATED) --- */
         #home-summary-section {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
+            /* Changed to flex-start so text starts at the left margin */
+            justify-content: flex-start; 
+            /* Set text alignment to left for full width flow */
+            text-align: left; 
             /* Increased top padding for mobile fix */
             padding: 150px 5% 50px 5%; 
             position: relative; 
             z-index: 5; 
         }
         .summary-text {
-            max-width: 800px;
-            /* Centering the block horizontally */
-            margin: 0 auto; 
+            /* REMOVED max-width and margin: 0 auto; */
+            width: 100%; /* Ensure it spans the full content width */
+            
             /* Updated font size */
             font-size: 2.2em; 
             line-height: 1.5;
@@ -191,13 +193,7 @@
     
     <div id="home-summary-section">
         <div class="summary-text">
-            I am an undergraduate student in School of Architecture at National Technical University of Athens, a Business Minor Student at Deree
-            and a proud excellence scholarship graduate of Athens College (2023). 
-            I am a creative 20-year old student that loves mathematics, design and phylosophy,
-            but with a personality test that says that 99% of me is research in core. 
-            I can not be only one thing and I do not want to be only one thing. I have been throught a lot different fields in the past as my past activities witness and after all of them i choose to be an arctitect and an engineer. 
-            Because Architecture challenges me every day to be something different, 
-            to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better.
+            I am an undergraduate student in School of Architecture at National Technical University of Athens and an excellence scholarship graduate of Athens College (2023). I am a creative 19-year old student that loves **mathematics, design and phylosophy**, but with a personality test that says that 99% of me is research in core. I can not be only one thing. I do not want to. Architecture challenges me every day to be something different, to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better.
         </div>
     </div>
     
