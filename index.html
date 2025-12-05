@@ -7,16 +7,16 @@
     <title>Anastasia Anna Pateli Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <style>
-        /* Base Styling for Dark Look - UPDATED */
+        /* Base Styling for Dark Look */
         body {
             text-align: left;
             margin: 0;
             padding: 0;
-            background-color: #000; /* ALL BACKGROUND IS BLACK */
-            color: #fff; /* ALL DEFAULT TEXT IS WHITE */
+            background-color: #000;
+            color: #fff; 
         }
         
-        /* --- 1. NEW CSS for Carousel --- */
+        /* --- 1. CSS for Carousel --- */
         #background-carousel {
             position: fixed;
             top: 0;
@@ -24,7 +24,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: 0; /* Stays behind the header and text */
+            z-index: 0; /* Background Layer */
         }
 
         .carousel-image {
@@ -34,23 +34,23 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0; /* Hidden by default */
-            transition: opacity 2s ease-in-out; /* Smooth fade effect */
-            filter: brightness(30%); /* Darkens the image for text readability */
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            filter: brightness(30%); 
         }
 
         .carousel-image.active {
-            opacity: 1; /* Show the active image */
+            opacity: 1;
         }
         
-        /* --- 2. NEW CSS for Header and Navigation --- */
+        /* --- 2. CSS for Header and Navigation --- */
         .header {
-            position: fixed; /* Keep the header visible */
+            position: fixed; 
             top: 0;
             left: 0;
             width: 100%;
             padding: 20px 5%;
-            z-index: 10; /* Ensures it's above the carousel and summary */
+            z-index: 10; /* Ensures it's clearly above the carousel (z-index: 0) */
         }
         .name-title {
             font-size: 2.5em;
@@ -58,14 +58,14 @@
             margin-bottom: 5px;
         }
         .nav-menu {
-            display: flex; /* Links horizontally */
+            display: flex;
             gap: 20px;
             list-style: none;
             padding: 0;
             margin: 0;
         }
         .nav-menu a {
-            color: #fff; /* Navigation links are white */
+            color: #fff;
             text-decoration: none;
             font-size: 0.9em;
             text-transform: uppercase;
@@ -77,32 +77,35 @@
             opacity: 1;
         }
         
-        /* --- 3. NEW CSS for Home Summary Section --- */
+        /* --- 3. CSS for Home Summary Section --- */
         #home-summary-section {
-            min-height: 100vh; /* Covers the whole viewport height */
+            min-height: 100vh;
             display: flex;
-            align-items: center; /* Center content vertically */
-            justify-content: center; /* Center content horizontally */
+            align-items: center;
+            justify-content: center;
             text-align: center;
             padding: 100px 5% 50px 5%;
             position: relative; 
-            z-index: 1; /* Ensures text is above the carousel */
+            z-index: 5; /* Ensures text is visibly above the carousel (z-index: 0) */
         }
         .summary-text {
             max-width: 800px;
             font-size: 1.8em; 
             line-height: 1.5;
             font-weight: 300;
+            color: #fff; /* Ensure text color is explicitly white */
         }
 
-        /* --- 4. CSS for Content Sections - UPDATED --- */
+        /* --- 4. CSS for Content Sections --- */
         .content-container {
             max-width: 960px;
             margin: 0 auto;
             padding: 50px 20px;
-            background-color: #000; /* Changed from white to BLACK */
-            color: #fff; /* Changed from dark text to WHITE */
+            background-color: #000;
+            color: #fff;
             text-align: left;
+            position: relative; /* Set stacking context */
+            z-index: 2; /* Ensures content sections are above the fixed carousel too */
         }
         .content-container h2 {
             text-align: center;
@@ -118,12 +121,11 @@
             object-fit: cover;
             border-radius: 10px;
         }
-        /* Ensure specific links in the content sections are visible */
         .content-container a {
-            color: #ADD8E6; /* Light Blue for hyperlinks against black background */
+            color: #ADD8E6; 
         }
         hr {
-            border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light grey line for separation */
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
