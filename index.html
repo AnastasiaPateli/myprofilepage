@@ -139,7 +139,7 @@
         hr {
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
-        /* Style for the new Distinctions section */
+        /* Style for the Distinctions section */
         #distinctions {
             padding-top: 50px;
             text-align: center;
@@ -148,7 +148,6 @@
 </head>
 <body>
     
-    <!-- === BACKGROUND CAROUSEL === -->
     <div id="background-carousel">
         <img src="Intersection Point.png" alt="Intersection Point" class="carousel-image active">
         <img src="presentation day.jpg" alt="Presentation Day" class="carousel-image">
@@ -156,51 +155,29 @@
         <img src="Crisper cas 9.png" alt="Crispr Cas 9" class="carousel-image">
     </div>
 
-    <!-- === HEADER & NAVIGATION === -->
     <div class="header">
         <h1 class="name-title">Anastasia Anna Pateli</h1>
         <ul class="nav-menu">
-            <li><a href="#distinctions">Distinctions</a></li>
             <li><a href="#internships">Internships</a></li>
             <li><a href="#research-programs">Research Programs</a></li>
+            <li><a href="#distinctions">Distinctions</a></li>
             <li><a href="#volunteering-programs">Volunteering Programs</a></li>
         </ul>
     </div>
     
-    <!-- === HOME SUMMARY SECTION === -->
     <div id="home-summary-section">
         <div class="summary-text">
             I am an undergraduate student in School of Architecture at National Technical University of Athens and an excellence scholarship graduate of Athens College (2023). I am a creative 19-year old student that loves **mathematics, design and phylosophy**, but with a personality test that says that 99% of me is research in core. I can not be only one thing. I do not want to. Architecture challenges me every day to be something different, to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better.
         </div>
     </div>
     
-    <!-- === CONTENT SECTIONS === -->
     <div class="content-container">
         
-        <!-- === SECTION: DISTINCTIONS & HONORS === -->
-        <section id="distinctions">
-            <h2>🏆 Distinctions & Honors</h2>
-            <div class="row content-row">
-                <div class="twelve columns">
-                    <ul>
-                        <li>**Excellence Scholarship Graduate** of Athens College (2023)</li>
-                        <!-- Add your other distinctions here -->
-                        <li>[Add Distinction 2 here]</li>
-                        <li>[Add Distinction 3 here]</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Section: Internships -->
         <section id="internships">
             <h2>💼 Internships</h2>
             <div class="row content-row">
                 <div class="twelve columns">
                     
-                    <!-- Internship Image Block - UPDATED SRC -->
                     <div class="internship-image-container">
                         <img src="tenancy agreement website.png" alt="Screenshot of the auxiliary website for tenancy agreements" class="internship-image">
                     </div>
@@ -215,7 +192,6 @@
 
         <hr>
 
-        <!-- Section: Research Programs -->
         <section id="research-programs">
             <h2>🔬 Past Research Programs</h2>
             <div class="row content-row">
@@ -239,7 +215,21 @@
         
         <hr>
 
-        <!-- Section: Volunteering Programs -->
+        <section id="distinctions">
+            <h2>🏆 Distinctions & Honors</h2>
+            <div class="row content-row">
+                <div class="twelve columns">
+                    <ul>
+                        <li>**Excellence Scholarship Graduate** of Athens College (2023)</li>
+                        <li>[Add Distinction 2 here]</li>
+                        <li>[Add Distinction 3 here]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+
         <section id="volunteering-programs">
             <h2>🕊️ Volunteering Programs</h2>
             <div class="row content-row">
@@ -253,7 +243,6 @@
         
     </div>
 
-    <!-- === JAVASCRIPT FOR CAROUSEL === -->
     <script>
         const images = document.querySelectorAll('.carousel-image');
         let currentImage = 0;
