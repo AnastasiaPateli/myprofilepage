@@ -7,20 +7,31 @@
     <title>Anastasia Anna Pateli Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <style>
-        /* ADDED: Smooth scroll behavior to the HTML element */
-        html {
-            scroll-behavior: smooth; 
+        /* --- FONT DEFINITION (ASSUMING YOU HAVE LICENSED FILES) --- */
+        /* You must place your Avenir font files (e.g., AvenirNextLTPro-Lt.woff) in a 'fonts/' folder */
+        @font-face {
+            font-family: 'Avenir Next LT Pro';
+            src: url('fonts/AvenirNextLTPro-Lt.woff2') format('woff2'),
+                 url('fonts/AvenirNextLTPro-Lt.woff') format('woff');
+            font-weight: 300; /* Light weight */
+            font-style: normal;
         }
 
-        /* Base Styling for Dark Look */
+        /* Set the custom font globally, with safe fallbacks */
         body {
+            font-family: 'Avenir Next LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             text-align: left;
             margin: 0;
             padding: 0;
             background-color: #000;
             color: #fff; 
         }
-        
+
+        /* ADDED: Smooth scroll behavior to the HTML element */
+        html {
+            scroll-behavior: smooth; 
+        }
+
         /* --- 1. CSS for Carousel --- */
         #background-carousel {
             position: fixed;
