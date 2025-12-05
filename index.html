@@ -123,15 +123,15 @@
             border-radius: 10px;
         }
         .internship-image-container {
-            text-align: center; /* Center the image within its container */
+            text-align: center;
             margin-bottom: 30px;
         }
         .internship-image {
             width: 100%;
-            max-width: 600px; /* Limit the max size of the specific internship image */
+            max-width: 600px;
             height: auto;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Optional subtle white shadow */
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
         }
         .content-container a {
             color: #ADD8E6; 
@@ -139,10 +139,16 @@
         hr {
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
+        /* Style for the new Distinctions section */
+        #distinctions {
+            padding-top: 50px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     
+    <!-- === BACKGROUND CAROUSEL === -->
     <div id="background-carousel">
         <img src="Intersection Point.png" alt="Intersection Point" class="carousel-image active">
         <img src="presentation day.jpg" alt="Presentation Day" class="carousel-image">
@@ -150,37 +156,58 @@
         <img src="Crisper cas 9.png" alt="Crispr Cas 9" class="carousel-image">
     </div>
 
+    <!-- === HEADER & NAVIGATION === -->
     <div class="header">
         <h1 class="name-title">Anastasia Anna Pateli</h1>
         <ul class="nav-menu">
+            <li><a href="#distinctions">Distinctions</a></li>
             <li><a href="#internships">Internships</a></li>
             <li><a href="#research-programs">Research Programs</a></li>
             <li><a href="#volunteering-programs">Volunteering Programs</a></li>
         </ul>
     </div>
     
+    <!-- === HOME SUMMARY SECTION === -->
     <div id="home-summary-section">
         <div class="summary-text">
             I am an undergraduate student in School of Architecture at National Technical University of Athens and an excellence scholarship graduate of Athens College (2023). I am a creative 19-year old student that loves **mathematics, design and phylosophy**, but with a personality test that says that 99% of me is research in core. I can not be only one thing. I do not want to. Architecture challenges me every day to be something different, to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better.
         </div>
     </div>
     
+    <!-- === CONTENT SECTIONS === -->
     <div class="content-container">
         
+        <!-- === SECTION: DISTINCTIONS & HONORS === -->
+        <section id="distinctions">
+            <h2>🏆 Distinctions & Honors</h2>
+            <div class="row content-row">
+                <div class="twelve columns">
+                    <ul>
+                        <li>**Excellence Scholarship Graduate** of Athens College (2023)</li>
+                        <!-- Add your other distinctions here -->
+                        <li>[Add Distinction 2 here]</li>
+                        <li>[Add Distinction 3 here]</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Section: Internships -->
         <section id="internships">
             <h2>💼 Internships</h2>
             <div class="row content-row">
                 <div class="twelve columns">
                     
+                    <!-- Internship Image Block - UPDATED SRC -->
                     <div class="internship-image-container">
-                        <img src="tenancy agreement website.png" alt="tenancy agreement website.png" class="internship-image">
+                        <img src="tenancy agreement website.png" alt="Screenshot of the auxiliary website for tenancy agreements" class="internship-image">
                     </div>
                     
-                    <h4>IT Engineering Internship | GEOPOLITIA O.E.</h4>
+                    <h4>IT Engineering Internship | GEOPOLITIA O.E. (July – September 2025)</h4>
                     <p>
-                        As an IT Engineering Intern at GEOPOLITIA O.E. from July to September 2025, my primary responsibility was spearheading the development of a specialized auxiliary website  designed to streamline administrative processes. 
-                        This platform was specifically built to automatically generate agricultural tenancy agreements for seamless integration with the national state system, EAE 2023-7. I was tasked with the critical function of data automation, 
-                        which involved processing raw input data sourced from corresponding .json files to dynamically produce the precise number of necessary tenancy agreements for each individual client.
+                        As an IT Engineering Intern at GEOPOLITIA O.E., my primary responsibility was spearheading the development of a specialized **auxiliary website** designed to streamline administrative processes. This platform was specifically built to automatically generate **agricultural tenancy agreements** for seamless integration with the national state system, **EAE 2023-7**. I was tasked with the critical function of **data automation**, which involved processing raw input data sourced from corresponding **.json files** to dynamically produce the precise number of necessary tenancy agreements for each individual client. This project significantly enhanced administrative efficiency by automating document generation, minimizing the need for manual data handling and potential errors.
                     </p>
                 </div>
             </div>
@@ -188,6 +215,7 @@
 
         <hr>
 
+        <!-- Section: Research Programs -->
         <section id="research-programs">
             <h2>🔬 Past Research Programs</h2>
             <div class="row content-row">
@@ -211,6 +239,7 @@
         
         <hr>
 
+        <!-- Section: Volunteering Programs -->
         <section id="volunteering-programs">
             <h2>🕊️ Volunteering Programs</h2>
             <div class="row content-row">
@@ -224,6 +253,7 @@
         
     </div>
 
+    <!-- === JAVASCRIPT FOR CAROUSEL === -->
     <script>
         const images = document.querySelectorAll('.carousel-image');
         let currentImage = 0;
