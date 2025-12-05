@@ -7,13 +7,77 @@
     <title>Anastasia Anna Pateli Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <style>
+        /* Reset basic text alignment */
         body {
-            text-align: center;
-            margin-top: 50px;
+            text-align: left; /* Default to left for modern layout */
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background for high contrast like the example image */
+            color: #fff; /* White text for contrast */
         }
-        .container {
+        
+        /* New CSS for Header and Navigation */
+        .header {
+            position: fixed; /* Keep the header visible */
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 5%; /* Padding on the sides */
+            z-index: 10;
+        }
+        .name-title {
+            font-size: 2.5em;
+            font-weight: 300; /* Lighter font weight */
+            margin-bottom: 5px;
+        }
+        .nav-menu {
+            display: flex; /* Display links horizontally */
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        .nav-menu a:hover {
+            opacity: 1;
+        }
+        
+        /* New CSS for Home Section */
+        #home-summary-section {
+            min-height: 100vh; /* Make it cover the whole viewport height */
+            display: flex;
+            align-items: center; /* Center content vertically */
+            justify-content: center; /* Center content horizontally */
+            text-align: center;
+            padding: 100px 5% 50px 5%;
+        }
+        .summary-text {
             max-width: 800px;
+            font-size: 1.8em; /* Large text size */
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        /* General Content Layout (for sections after home) */
+        .content-container {
+            max-width: 960px;
             margin: 0 auto;
+            padding: 50px 20px;
+            background-color: #fff; /* White background for content sections */
+            color: #333; /* Dark text for readability */
+            text-align: left;
+        }
+        .content-container h2 {
+            text-align: center;
+            margin-bottom: 40px;
         }
         .row {
             margin-top: 30px;
@@ -24,107 +88,34 @@
             object-fit: cover;
             border-radius: 10px;
         }
-        
-        /* New CSS for Navigation */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            text-decoration: none; /* Make sure the logo isn't underlined */
-            color: #333; /* Default text color */
-        }
-        .menu-icon {
-            cursor: pointer;
-            padding: 10px;
-            display: block; /* Ensure it's visible */
-        }
-        .bar {
-            width: 25px;
-            height: 3px;
-            background-color: #333;
-            margin: 4px 0;
-            transition: 0.4s;
-        }
-        .nav-menu {
-            display: none; /* Hidden by default */
-            position: absolute;
-            top: 70px; /* Adjust based on header height */
-            right: 10%;
-            background-color: #f9f9f9;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-            min-width: 160px;
-            border-radius: 5px;
-            text-align: left;
-        }
-        .nav-menu.active {
-            display: block; /* Show when active */
-        }
-        .nav-menu a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .nav-menu a:hover {
-            background-color: #ddd;
-        }
-        
-        /* Ensure sections are spaced nicely */
-        #internships, #research-programs, #volunteering-programs {
-            padding-top: 50px; /* Add space for fixed header if you add one later */
+        .row.content-row {
+            margin-bottom: 50px;
         }
     </style>
 </head>
 <body>
+    
     <div class="header">
-        <a href="#home" class="logo">Anastasia Anna Pateli</a>
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div id="navMenu" class="nav-menu">
-            <a href="#internships">Internships</a>
-            <a href="#research-programs">Research Programs</a>
-            <a href="#volunteering-programs">Volunteering Programs</a>
+        <h1 class="name-title">Anastasia Anna Pateli</h1>
+        <ul class="nav-menu">
+            <li><a href="#internships">Internships</a></li>
+            <li><a href="#research-programs">Research Programs</a></li>
+            <li><a href="#volunteering-programs">Volunteering Programs</a></li>
+        </ul>
+    </div>
+    
+    <div id="home-summary-section">
+        <div class="summary-text">
+            I am an undergraduate student in School of Architecture at National Technical University of Athens [cite: 5] and an excellence scholarship graduate of Athens College (2023)[cite: 5]. I am a creative 19-year old student that loves **mathematics, design and phylosophy**, but with a personality test that says that 99% of me is research in core[cite: 6]. I can not be only one thing. I do not want to[cite: 7]. Architecture challenges me every day to be something different, to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better[cite: 8, 9].
+            <p style="margin-top: 50px;"><a href="#research-programs" style="color: #fff; text-decoration: underline; font-size: 0.8em; opacity: 0.8;">Read more</a></p>
         </div>
     </div>
-
-    <div class="container" id="home">
-        
-        <div class="row">
-            <div class="six columns">
-                <h1>Hi, I am Anastasia Anna Pateli</h1>
-                <p>I am an undergraduate student in School of Architecture at National Technical University of Athens and 
-                    an excellence schollarship graduate of Athens College (2023).</p>
-                
-                <h3>Intersection Point</h3>
-                <p>A creative 19-year old student that loves **mathematics, design and phylosophy**, 
-                    but with a personality test that says that 99% of me is research in core.
-                    I can not be only one thing. I do not want to.
-                    And that is the reason I love **Architecture**, 
-                    because I am challenged every day to be something different, to think in a way that I did not yesterday
-                    and to create with a vision that tomorrow will make the world better.
-                </p>
-            </div>
-            <div class="six columns">
-                <img src="Intersection Point.png" alt="Intersection Point" class="image">
-            </div>
-        </div>
-        
-        <hr>
+    
+    <div class="content-container">
         
         <section id="internships">
             <h2>💼 Internships</h2>
-            <div class="row">
+            <div class="row content-row">
                 <div class="twelve columns">
                     <p>Details about your internships will go here.</p>
                 </div>
@@ -135,29 +126,21 @@
 
         <section id="research-programs">
             <h2>🔬 Past Research Programs</h2>
-            <div class="row">
+            <div class="row content-row">
                 <div class="four columns">
                     <img src="image0 (5).jpeg" alt="image0 (5)" class="image">
                     <h4>Final Project ”Hyperbolic Paraboloid”</h4>
-                    <p>A collaborative research project exploring how a solid with **double-ruled surfaces** can be constructed using industrial flat surfaces. 
-                        The **hyperbolic paraboloid** presents an optimal solution as a double-ruled surface formed by straight lines, offering exceptional mechanical properties.
-                        This is a concept I aspire to further develop in the future, integrating architectural elements to design a building with an accompanying public space.
-                    </p>
+                    <p>A collaborative research project exploring how a solid with double-ruled surfaces can be constructed using industrial flat surfaces[cite: 14]. The hyperbolic paraboloid presents an optimal solution as a double-ruled surface formed by straight lines, offering exceptional mechanical properties[cite: 15]. This is a concept I aspire to further develop in the future, integrating architectural elements to design a building with an accompanying public space[cite: 16].</p>
                 </div>
                 <div class="four columns">
                     <img src="L_5_PHOTONS_AAP.jpg" alt="L_5_PHOTONS_AAP" class="image">
                     <h4>International Masterclass ”Hands on Particle Physics”</h4>
-                    <p>Research culminated in a collaborative effort to analyze diagrams illustrating the effectiveness of various particles—**protons, photons, and carbon ions**—in cancer treatment. 
-                        Using MatRad (MATLAB), we proposed an optimized combination of beam angles and particle types to target cancer cells while minimizing damage to surrounding healthy tissue.
-                    </p>
+                    <p>The project included an introduction to the fundamentals of particle therapy for cancer treatment[cite: 18]. The research culminated in a collaborative effort to analyze diagrams illustrating the effectiveness of various particles—protons, photons, and carbon ions—in cancer treatment[cite: 19]. Using MatRad (MATLAB), we proposed an optimized combination of beam angles and particle types to target cancer cells while minimizing damage to surrounding healthy tissue[cite: 20].</p>
                 </div>
                 <div class="four columns">
                     <img src="Crisper cas 9.png" alt="Crisper cas 9" class="image">
                     <h4>Personal Project: ”Genetic engineering and DNA editing”</h4>
-                    <p>A six-month research project exploring the mechanism and applications of **CRISPR-Cas9**, a groundbreaking gene-editing technology. 
-                        My research led me to the conclusion that CRISPR-Cas9 holds significant potential for the treatment of genetic diseases, particularly **multiple sclerosis**. 
-                        I also created 3D models of nerve cells and a CRISPR-Cas9 mechanism using specialized software.
-                    </p>
+                    <p>A six-month research project exploring the mechanism and applications of CRISPR-Cas9, a groundbreaking gene-editing technology[cite: 22]. Following the scientific method, my research led me to the conclusion that CRISPR-Cas9 holds significant potential for the treatment of genetic diseases, particularly multiple sclerosis[cite: 23]. To integrate bioethical considerations, I conducted three interviews[cite: 24]. I also created 3D models of two nerve cells and a CRISPR-Cas9 illustrating its role in modifying a DNA double helix using specialized software[cite: 27].</p>
                 </div>
             </div>
         </section>
@@ -166,24 +149,15 @@
 
         <section id="volunteering-programs">
             <h2>🕊️ Volunteering Programs</h2>
-            <div class="row">
+            <div class="row content-row">
                 <div class="twelve columns">
                     <img src="presentation day.jpg" alt="presentation day" class="image">
                     <h4>"Aerial Breaths" Onassis AiR Spring Open Days 2025</h4>
-                    <p>Volunteered for “<a href="https://www.onassis.org/initiatives/onassis-air/onassis-air-onx-fellowships/dimitris-papanikolaou-aerial-breaths">Aerial Breaths</a>,” a large-scale public art installation conceptualized and led by Mr. D. Papanikolaou, envisioning a network of wirelessly connected giant inflatables throughout Athens. 
-                        I contributed to giving "breath" to this vision and presented the project at the Onassis AiR Spring Open Days 2025.
-                    </p>
+                    <p>“Aerial Breaths” is a large-scale public art installation conceptualized and led by my professor, Mr. D. Papanikolaou[cite: 10, 11]. This project envisions a network of wirelessly connected giant inflatables placed at selected locations throughout Athens[cite: 11]. It seeks to redefine urban connectivity and interaction by challenging our perception of locality, belonging, and social identity[cite: 12]. As a volunteer, I contributed to giving "breath" to this vision and presented the project at the Onassis AiR Spring Open Days 2025[cite: 13].</p>
                 </div>
             </div>
         </section>
         
     </div>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("navMenu");
-            menu.classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
