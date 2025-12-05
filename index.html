@@ -7,31 +7,58 @@
     <title>Anastasia Anna Pateli Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <style>
-        /* Reset basic text alignment */
+        /* Base Styling for Dark Homepage Look */
         body {
-            text-align: left; /* Default to left for modern layout */
+            text-align: left;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Black background for high contrast like the example image */
-            color: #fff; /* White text for contrast */
+            background-color: #000; /* Black background for high contrast */
+            color: #fff; /* White text for contrast on the home section */
         }
         
-        /* New CSS for Header and Navigation */
+        /* --- 1. NEW CSS for Carousel --- */
+        #background-carousel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0; /* Stays behind the header and text */
+        }
+
+        .carousel-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 2s ease-in-out; /* Smooth fade effect */
+            filter: brightness(30%); /* Darkens the image for text readability */
+        }
+
+        .carousel-image.active {
+            opacity: 1; /* Show the active image */
+        }
+        
+        /* --- 2. NEW CSS for Header and Navigation --- */
         .header {
             position: fixed; /* Keep the header visible */
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 5%; /* Padding on the sides */
-            z-index: 10;
+            padding: 20px 5%;
+            z-index: 10; /* Ensures it's above the carousel and summary */
         }
         .name-title {
             font-size: 2.5em;
-            font-weight: 300; /* Lighter font weight */
+            font-weight: 300;
             margin-bottom: 5px;
         }
         .nav-menu {
-            display: flex; /* Display links horizontally */
+            display: flex; /* Links horizontally */
             gap: 20px;
             list-style: none;
             padding: 0;
@@ -50,23 +77,25 @@
             opacity: 1;
         }
         
-        /* New CSS for Home Section */
+        /* --- 3. NEW CSS for Home Summary Section --- */
         #home-summary-section {
-            min-height: 100vh; /* Make it cover the whole viewport height */
+            min-height: 100vh; /* Covers the whole viewport height */
             display: flex;
             align-items: center; /* Center content vertically */
             justify-content: center; /* Center content horizontally */
             text-align: center;
             padding: 100px 5% 50px 5%;
+            position: relative; 
+            z-index: 1; /* Ensures text is above the carousel */
         }
         .summary-text {
             max-width: 800px;
-            font-size: 1.8em; /* Large text size */
+            font-size: 1.8em; 
             line-height: 1.5;
             font-weight: 300;
         }
 
-        /* General Content Layout (for sections after home) */
+        /* --- 4. CSS for Content Sections --- */
         .content-container {
             max-width: 960px;
             margin: 0 auto;
@@ -79,8 +108,9 @@
             text-align: center;
             margin-bottom: 40px;
         }
-        .row {
+        .row.content-row {
             margin-top: 30px;
+            margin-bottom: 50px;
         }
         .image {
             width: 100%;
@@ -88,13 +118,17 @@
             object-fit: cover;
             border-radius: 10px;
         }
-        .row.content-row {
-            margin-bottom: 50px;
-        }
     </style>
 </head>
 <body>
     
+    <div id="background-carousel">
+        <img src="Intersection Point.png" alt="Intersection Point" class="carousel-image active">
+        <img src="presentation day.jpg" alt="Presentation Day" class="carousel-image">
+        <img src="image0 (5).jpeg" alt="Hyperbolic Paraboloid" class="carousel-image">
+        <img src="Crisper cas 9.png" alt="Crispr Cas 9" class="carousel-image">
+    </div>
+
     <div class="header">
         <h1 class="name-title">Anastasia Anna Pateli</h1>
         <ul class="nav-menu">
@@ -106,7 +140,7 @@
     
     <div id="home-summary-section">
         <div class="summary-text">
-            I am an undergraduate student in School of Architecture at National Technical University of Athens [cite: 5] and an excellence scholarship graduate of Athens College (2023)[cite: 5]. I am a creative 20-year old student that loves **mathematics, design and phylosophy**, but with a personality test that says that 99% of me is research in core[cite: 6]. I can not be only one thing. I do not want to[cite: 7]. Architecture challenges me every day to be something different, to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better[cite: 8, 9].
+            I am an undergraduate student in School of Architecture at National Technical University of Athens and an excellence scholarship graduate of Athens College (2023). I am a creative 19-year old student that loves **mathematics, design and phylosophy**, but with a personality test that says that 99% of me is research in core. I can not be only one thing. I do not want to. Architecture challenges me every day to be something different, to think in a way that I did not yesterday and to create with a vision that tomorrow will make the world better.
             <p style="margin-top: 50px;"><a href="#research-programs" style="color: #fff; text-decoration: underline; font-size: 0.8em; opacity: 0.8;">Read more</a></p>
         </div>
     </div>
@@ -129,18 +163,18 @@
             <div class="row content-row">
                 <div class="four columns">
                     <img src="image0 (5).jpeg" alt="image0 (5)" class="image">
-                    <h4>Final Project ”Hyperbolic Paraboloid”</h4>
-                    <p>A collaborative research project exploring how a solid with double-ruled surfaces can be constructed using industrial flat surfaces[cite: 14]. The hyperbolic paraboloid presents an optimal solution as a double-ruled surface formed by straight lines, offering exceptional mechanical properties[cite: 15]. This is a concept I aspire to further develop in the future, integrating architectural elements to design a building with an accompanying public space[cite: 16].</p>
+                    [cite_start]<h4>Final Project ”Hyperbolic Paraboloid” [cite: 14]</h4>
+                    [cite_start]<p>A collaborative research project exploring how a solid with **double-ruled surfaces** can be constructed using industrial flat surfaces[cite: 14]. [cite_start]The **hyperbolic paraboloid** presents an optimal solution as a double-ruled surface formed by straight lines, offering exceptional mechanical properties[cite: 15]. [cite_start]This is a concept I aspire to further develop in the future, integrating architectural elements to design a building with an accompanying public space[cite: 16].</p>
                 </div>
                 <div class="four columns">
                     <img src="L_5_PHOTONS_AAP.jpg" alt="L_5_PHOTONS_AAP" class="image">
-                    <h4>International Masterclass ”Hands on Particle Physics”</h4>
-                    <p>The project included an introduction to the fundamentals of particle therapy for cancer treatment[cite: 18]. The research culminated in a collaborative effort to analyze diagrams illustrating the effectiveness of various particles—protons, photons, and carbon ions—in cancer treatment[cite: 19]. Using MatRad (MATLAB), we proposed an optimized combination of beam angles and particle types to target cancer cells while minimizing damage to surrounding healthy tissue[cite: 20].</p>
+                    [cite_start]<h4>International Masterclass ”Hands on Particle Physics” [cite: 17]</h4>
+                    [cite_start]<p>The project included an introduction to the fundamentals of **particle therapy** (radiation therapy) for cancer treatment[cite: 18]. [cite_start]The research culminated in a collaborative effort to analyze diagrams illustrating the effectiveness of various particles—**protons, photons, and carbon ions**—in cancer treatment[cite: 19]. [cite_start]Using MatRad (MATLAB), we proposed an optimized combination of beam angles and particle types to target cancer cells while minimizing damage to surrounding healthy tissue[cite: 20].</p>
                 </div>
                 <div class="four columns">
                     <img src="Crisper cas 9.png" alt="Crisper cas 9" class="image">
-                    <h4>Personal Project: ”Genetic engineering and DNA editing”</h4>
-                    <p>A six-month research project exploring the mechanism and applications of CRISPR-Cas9, a groundbreaking gene-editing technology[cite: 22]. Following the scientific method, my research led me to the conclusion that CRISPR-Cas9 holds significant potential for the treatment of genetic diseases, particularly multiple sclerosis[cite: 23]. To integrate bioethical considerations, I conducted three interviews[cite: 24]. I also created 3D models of two nerve cells and a CRISPR-Cas9 illustrating its role in modifying a DNA double helix using specialized software[cite: 27].</p>
+                    [cite_start]<h4>Personal Project: ”Genetic engineering and DNA editing” [cite: 21]</h4>
+                    [cite_start]<p>A six-month research project exploring the mechanism and applications of **CRISPR-Cas9**, a groundbreaking gene-editing technology[cite: 22]. [cite_start]My research led me to the conclusion that CRISPR-Cas9 holds significant potential for the treatment of genetic diseases, particularly **multiple sclerosis**[cite: 23]. [cite_start]To integrate bioethical considerations, I conducted three interviews[cite: 24]. [cite_start]I also created 3D models of two nerve cells (one damaged by multiple sclerosis and one healthy) and a CRISPR-Cas9 illustrating its role in modifying a DNA double helix using specialized software[cite: 27].</p>
                 </div>
             </div>
         </section>
@@ -148,16 +182,35 @@
         <hr>
 
         <section id="volunteering-programs">
-            <h2>🕊️ Volunteering Programs</h2>
+            [cite_start]<h2>🕊️ Volunteering Programs [cite: 9, 10]</h2>
             <div class="row content-row">
                 <div class="twelve columns">
                     <img src="presentation day.jpg" alt="presentation day" class="image">
-                    <h4>"Aerial Breaths" Onassis AiR Spring Open Days 2025</h4>
-                    <p>“Aerial Breaths” is a large-scale public art installation conceptualized and led by my professor, Mr. D. Papanikolaou[cite: 10, 11]. This project envisions a network of wirelessly connected giant inflatables placed at selected locations throughout Athens[cite: 11]. It seeks to redefine urban connectivity and interaction by challenging our perception of locality, belonging, and social identity[cite: 12]. As a volunteer, I contributed to giving "breath" to this vision and presented the project at the Onassis AiR Spring Open Days 2025[cite: 13].</p>
+                    [cite_start]<h4>"Aerial Breaths" Onassis AiR Spring Open Days 2025 [cite: 10]</h4>
+                    [cite_start]<p>“<a href="https://www.onassis.org/initiatives/onassis-air/onassis-air-onx-fellowships/dimitris-papanikolaou-aerial-breaths">Aerial Breaths</a>” is a large-scale public art installation conceptualized and led by my professor, Mr. D. Papanikolaou[cite: 10]. [cite_start]This project envisions a network of wirelessly connected giant inflatables placed at selected locations throughout Athens[cite: 11]. [cite_start]It seeks to redefine urban connectivity and interaction by challenging our perception of locality, belonging, and social identity[cite: 12]. [cite_start]As a volunteer, I contributed to giving "breath" to this vision and presented the project at the Onassis AiR Spring Open Days 2025[cite: 13].</p>
                 </div>
             </div>
         </section>
         
     </div>
+
+    <script>
+        const images = document.querySelectorAll('.carousel-image');
+        let currentImage = 0;
+
+        function nextImage() {
+            // Remove 'active' class from current image
+            images[currentImage].classList.remove('active');
+            
+            // Move to the next image (wrap around if at the end)
+            currentImage = (currentImage + 1) % images.length;
+            
+            // Add 'active' class to the new current image
+            images[currentImage].classList.add('active');
+        }
+
+        // Start the carousel transition every 5 seconds (5000 milliseconds)
+        setInterval(nextImage, 5000); 
+    </script>
 </body>
 </html>
