@@ -89,7 +89,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 100px 5% 50px 5%;
+            /* INCREASED TOP PADDING: Creates space below the fixed header */
+            padding: 150px 5% 50px 5%; 
             position: relative; 
             z-index: 5; 
         }
@@ -105,7 +106,9 @@
         .content-container {
             max-width: 960px;
             margin: 0 auto;
-            padding: 50px 20px;
+            /* INCREASED TOP PADDING: Ensures content starts well below the header on scroll */
+            padding: 100px 20px 50px 20px; 
+            
             /* Semi-transparent black for a smoother blend */
             background-color: rgba(0, 0, 0, 0.9); 
             color: #fff;
